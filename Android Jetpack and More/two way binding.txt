@@ -1,0 +1,3 @@
+có thể sử dụng one way binding để hiển thị dữ liệu
+có thể sử sử dụng one way binding để lấy dữ liệu của user input
+nếu có trường hợp nào, muốn cả hiển thị dữ liệu và lấy user input ta có thể sử dụng two way binding

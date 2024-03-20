@@ -1,0 +1,34 @@
++Phương pháp Single Activity:
+Toàn bộ ứng dụng sẽ có một activity và activity đóng vai trò là một container chứa nhiều fragment.
+-Khi nào nên sử dụng Single Activity:
++ Navigation-based App: Nếu app dựa trên fragment như bottom navigation bar hay navigation drawer, nên sử dụng một activity có thể dễ dang quản lý navigation flow
++ Modular Design : Khi mà muốn xây dựng một app mudul khi mà mỗi tính năng hay module đại diện bởi một fragment, và có thể kết hợp những fragment này một các tự động
++ Optimized Memory Usage : Single Activity có thể tiết kiệm bộ nhớ hơn vì hệ thống phải quản lý ít thành phần hơn.
+-Ưu điểm :
++ Simplified Navigation : Sử dụng fragment với Single Activity có thể
+quản lý điều hướng đơn giản hơn, đặc biệt với app có navigation flows phức tạp.
++ Improved Performance : Single Activity có thể tiết kiệm bộ nhớ bởi vì hệ thống phải quản lý ít thành phần hơn -> hiệu suất app có thể tăng hơn (đặc biệt các thiết bị cấp thấp hơn)
++ Shared Resources : Fragment với Single Activity có thể dễ dàng chia sẻ tài nguyên và dữ liệu, giúp cho việc truyền dữ liệu giữa các thành phần của UI trở nên dễ dàng hơn.
++ Dynamic UI : Có thể UI tự động và linh hoạt bằng cách thay thế fragment khác trong cùng một activity, tạo điều kiện cho thiết kê module và có khả năng tương thích tốt.
++ Smooths Transition: Transition animations giữa fragment có thể mượt   mà hơn và liền mạch hơn , nâng cao trải nghiệm tổng thể của người dùng.
+-Nhược điểm :
++ Complex UI handling: Xử lý thiết kế và tương tác UI phức tạp với Single Activity , có thể dẫn đến một lượng code phức tạp hơn , đặc biết khi xử lý một lượng lớn Fragment
++ Learning curve : Hiểu và implement vòng đời fragment và giao tiếp giữa các fragment khác có thể là một thử thách lớn, đặc biệt đối với người mới.
+
++Phương pháp Multiple Activities 
+Ở phương pháp này , mỗi màn hình hay tính năng của app là một activity
++ Khi nào nên sử dụng Multiple Activities:
+- Task-based App: Nếu luồng logic của app là task-based, nghĩa là người dùng hoàn thành công việc riêng biệt ở trong từng màn hình khác nhau, nó thích hợp khi sử dụng Multiple Activities. Ví dụ, một app camera có thể có từng activity riêng biệt cho chụp ảnh và quay video
+- Independent Modules : Nếu các màn hình khác nhau của app độc lập với nhau và không phải chia sẻ nhiều data của app, multiple activities là một lựa chọn tốt
+- Simplicity and Modularity : Với app đơn giản và app mà bạn muốn giữ mỗi màn hình module và khép kín, multiple activities là một lựa chọn tốt
++ Ưu điểm:
+-Modular design : Mỗi Activity có thể đại diện cho một module độc lập, giúp cho nó dễ quản lý và hiểu được luồng của app
+-Simpler UI logic : Với app đơn giản , quản lý UI và tương tác của người dùng với từng activity cụ thể có thể làm cho code đơn giản hơn
+-Task Isolation : Activity là độc lập, có nghĩa là vấn đề ở trong một màn hình ít ảnh hưởng tới màn hình khác -> nâng cao tính ổn định của app hơn
+- Clear Separation : Activity phân tách các mối quan tâm một cách tự nhiên -> dễ dàng tổ chức và bảo trì code với các phần khác của app
+- Easier Learning Curve : Với người mới, hiểu khái niệm của activity và quản lý chúng một cách độc lập có thể đơn giản hơn với việc tương tác với các fragment phức tạp
++ Nhược điểm:
+-Navigation Complexity: Quản lý Navigation giữa nhiều activity có thể là một thử thách, đặc biệt với app có navigation flows phức tạp
+-Resource Duplication: Tài nguyên như là layout và drawbles có bị trùng lặp giữa các activity -> có thể làm tăng lên app size
+-Potential Memory Overhead: Mỗi Activity được bắt đầu với chi phí bộ nhớ của riêng nó, điều đó có thể tích luỹ trong nhiều yêu cầu sử dụng bộ nhớ -> ảnh hưởng tới hiệu năng 
+-Transition Overhead : Transition animation giữa các activity có thể  không được mượt mà như fragment transition -> ảnh hưởng tới trải nghiệm người dùng

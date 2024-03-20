@@ -1,0 +1,34 @@
+Các loại animation cơ bản 
++Translate -> Dịch chuyển view từ điểm này sang điểm khác
++Scale -> Thu nhỏ, phóng to một view theo một tỉ lệ
++Alpha -> làm mở,rõ một view từ hiện đến ẩn
++Rotate -> xoay một view
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@[package:]anim/interpolator_resource"
+    android:shareInterpolator=["true" | "false"] >
+    <alpha
+        android:fromAlpha="float" bắt đầu ở mờ hay rõ
+        android:toAlpha="float" kết thúc/>
+    <scale
+        android:fromXScale="float" bắt đầu độ lệch X
+        android:toXScale="float" kết thúc độ lệch X
+        android:fromYScale="float" bắt đầu độ lệch Y
+        android:toYScale="float" kết thúc độ lệch Y
+        android:pivotX="float" toạ độ để duy trì trạng thái cố định
+        android:pivotY="float" />
+    <translate
+        android:fromXDelta="float" bắt đầu ở X
+        android:toXDelta="float" Kết thúc ở X
+        android:fromYDelta="float" bắt đầu ở Y
+        android:toYDelta="float" /> Kết thúc ở Y
+    <rotate
+        android:fromDegrees="float" bắt đầu ở góc
+        android:toDegrees="float" kết thúc ở góc
+        android:pivotX="float"  toạ độ để duy trì trạng thái cố định
+        android:pivotY="float" />
+    <set>
+        ...
+    </set>
+</set>

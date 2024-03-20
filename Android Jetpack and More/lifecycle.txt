@@ -1,0 +1,6 @@
+Khi run app or open app ở trên máy, Android sẽ khởi tạo đối tượng của Activity ở trong bộ nhớ
+Android thay đổi vòng đời của Activity instance dựa trên yêu cầu của hệ thông và người dùng
+Khi Activity launched -> onCreate() được gọi (Ở đây Android System sẽ khởi tại instance của Activity, thực hiện các logic cơ bản ở đây, nên chỉ xảy ra một lần trong toàn bộ vòng đời của Activity) -> Sau khi thực hiện OnCreate xong -> OnStart -> onResume() (được thực hiện trong một khoảng thời gian rất nhanh) -> Activity Running (Activity stated sẽ là Resume State khi sự tập trung vào activity thay đỏi) -> Khi có các event như phone call, user go to activity khác -> gọi onPause()(khi trở lại acitvity từ pause state -> onResume() được gọi) -> onStop()( khi ở stop state , activity instance vẫn ở trong bộ nhớ nhưng user interface sẽ bị xoá -> khi trở lại activity -> onRestart() -> onStart() để khởi tjao lại interface) -> onDestroy()( xảy ra khi activity bị xoá khỏi hệ thống )
+Fragment được gọi là một thành phần actity phụ
+Fragment đại diện cho một phần có thể tái sử dụng trong giao diện người dùng của ứng dụng.
+Fragment cx có vòng đời riêng giống như activity, nó cx khai báo và quản lý layout của riêng nó, có thể quản lý input của riêng nó.Fragment không thể sống riêng một mình, bắt buộc phải sử dụng ở trong Activity hoặc Fragment khác

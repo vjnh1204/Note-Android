@@ -1,0 +1,7 @@
+Live Data là một lớp sở hữu dữ liệu cóa thể quan sát nhật biết được vong đời.
+Live Data chỉ cập nhật quan sát khi ở trong vòng đời running của activity.
+Ưu điểm : + Tự động cập nhật Ui khi có sự thay đổi của dữ liệu
+	  + Không cần viết code để quản lý vòng đời một cách thủ công
+2 type Live Data:
++LiveData : Dữ liệu ở trong LiveData chỉ có thể đọc được,không chính sửa được
++MutableLiveData: Là subclass của LiveData, một đối tượng MutableLiveData cho phép thay đổi/ cập nhật dữ liệu trong đó.
