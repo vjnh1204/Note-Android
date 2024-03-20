@@ -1,0 +1,4 @@
+Khi mà configration change thì activity sẽ được khởi tạo lại-> Các dữ liệu trước đó sẽ bị mấtt -> cần thiết sử dụng ViewModel để lưu giữ dữ liệu.
+ViewModel là một lớp model cho một view.
+Thường tạo một ViewModel cho một Activity or một Fragment.
+ViewModel được tạo ở trong bộ nhớ khi activity được khởi tạo, nó được giữ cho đến khi activity bị xóa khỏi bộ nhớ.-> ViewModel có thể giữ dữ liệu thuộc về activity

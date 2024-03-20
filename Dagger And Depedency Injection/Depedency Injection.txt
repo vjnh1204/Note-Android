@@ -1,0 +1,5 @@
+Depedency Injection là quá trình của xây dựng yêu cầu sự phụ thuộc (đối dượng/thực thể/ trường hợp) ở bên ngoài của đối tượng phụ thuộc và ung cấp chúng cho đối tượng phụ thuộc khi cần thiết
+Có 3 loại injection:
++ Contructor Injection
++ Method Injection
++ Field Injection
